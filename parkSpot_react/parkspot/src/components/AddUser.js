@@ -24,13 +24,12 @@ class AddUser extends Component {
 
   handleSubmit(event) {
     alert('A name was submitted: ' + this.state.newUser);
-    this.handleSubmit = this.handleSubmit.bind(this);
     event.preventDefault();
   }
     render() {
         return (
             <div>
-            <form onSubmit={() => this.handleSubmit}>
+            <form onSubmit={() => this.handleSubmit.bind(this)}>
         <label>
           First Name:
           <input type="text" value={this.state.value} onChange={this.handleChange} name='firstName'/>
@@ -59,7 +58,7 @@ class AddUser extends Component {
           Photo Url:
           <input type="text" value={this.state.value} onChange={this.handleChange} name='photo_url'/>
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="submit" />
       </form>
       </div>
         );

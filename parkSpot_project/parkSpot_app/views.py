@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import User, SpotList
 from rest_framework import viewsets
-from .serializers import *
+from .serializers import UserSerializer, SpotListSerializer
 
 # Create your views here.
 class UserView(viewsets.ModelViewSet):
