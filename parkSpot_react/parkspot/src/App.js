@@ -61,9 +61,9 @@ const SubTitle = styled.h2`
         <ParkSpotNav />
         <Title>Park Spot</Title>
         <SubTitle>...an easier way to find a spot</SubTitle>
-        <img src ={logo}/>
+        <img src ={logo} alt=''/>
         </Wrapper>
-        <UserList users={this.state.users}/>
+        <UserList users={this.state.users} />
         <AddUser />
       </div>
     );

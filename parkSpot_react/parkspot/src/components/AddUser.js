@@ -19,13 +19,13 @@ class AddUser extends Component {
         const newUser = { ...this.state.user }
         newUser[currentChange] = event.target.value
         this.setState({ user: newUser });
-
     }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.newUser);
+    console.log(this.state.value);
     event.preventDefault();
   }
+
     render() {
         return (
             <div>

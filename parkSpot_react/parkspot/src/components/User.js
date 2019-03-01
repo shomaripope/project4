@@ -10,7 +10,7 @@ class User extends Component {
                    {this.props.user.city} <br/>
                    {this.props.user.state} <br/>
                    {this.props.user.zip} <br/>
-                   <img src = {this.props.user.photo_url} alt/> <br/>
+                   <img src = {this.props.user.photo_url} alt=''/> <br/>
          </div>
         );
     }
