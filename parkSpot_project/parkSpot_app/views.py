@@ -1,9 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import User, SpotList
+from rest_framework import viewsets
+from .serializers import *
 
 # Create your views here.
-def parkSpotIndex(req):
-    return HttpResponse("new park spot app!")
+class UserView(viewsets.ModelViewSet):
+   queryset = User.objects.all()
+   serializer_class = UserSerializer
 
-def user(request):
-    return render(request, 'parkSpotList.html')
+
+class SpotView(viewsets.ModelViewSet):
+   queryset = SpotList.objects.all()
+   serializer_class = SpotListSerializer

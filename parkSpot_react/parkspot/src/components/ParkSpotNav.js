@@ -62,8 +62,7 @@ const SearchButton = styled.button`
           search
         </SearchContainer>
         <SearchButton>GO</SearchButton>
-        </IconsContainer>  
-        <link>User List</link>
+        </IconsContainer>
         </Nav>
       </div>
         );

@@ -1,8 +1,11 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
+from rest_framework import routers
 
+router = routers.DefaultRouter()
+router.register('', views.UserView)
+router.register('spots', views.SpotView)
 
 urlpatterns = [
-    path('', views.parkSpotIndex, name='parkSpot_app_index'),
-     path('/users', views.user, name='user_list'),
+    path('', include(router.urls))
 ]

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import User from './User';
+
 
 class UserList extends Component {
     
@@ -7,17 +9,16 @@ class UserList extends Component {
         return (
             <div>
                 <h1> User List </h1> 
+                <section>
                 {
-                    this.props.user.map((user,i) => {
+                    this.props.users.map((user,i) => {
         
-                    return (<div key={i} users={user} >
-                    
-                    </div>  )
+                        return (
+                            <User key={i} user={user} />
+                        );
                     })
-                    
                 } 
-                
-                
+                </section>
 
             </div>
         );
