@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class AddUser extends Component {
-    state={
+    state = {
         user: {
             firstName: '',
             lastName: '',
@@ -19,48 +20,55 @@ class AddUser extends Component {
         const newUser = { ...this.state.user }
         newUser[currentChange] = event.target.value
         this.setState({ user: newUser });
+        console.log(this.state.user)
     }
 
-  handleSubmit(event) {
-    console.log(this.state.value);
-    event.preventDefault();
-  }
+    handleSubmit = (event) => {
+        event.preventDefault();
+        const newUserInfo = { ...this.state.user }
+        axios.post('/users', newUserInfo)
+    }
 
     render() {
         return (
             <div>
-            <form onSubmit={() => this.handleSubmit.bind(this)}>
-        <label>
-          First Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} name='firstName'/>
-        </label> <br/>
-        <label>
-          Last Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} name='lastName'/>
-        </label><br/>
-        <label>
-          Address:
-          <input type="text" value={this.state.value} onChange={this.handleChange} name='address'/>
-        </label><br/>
-        <label>
-          City:
-          <input type="text" value={this.state.value} onChange={this.handleChange} name='city'/>
-        </label><br/>
-        <label>
-          State:
-          <input type="text" value={this.state.value} onChange={this.handleChange} name='state'/>
-        </label><br/>
-        <label>
-          Zip Code:
-          <input type="text" value={this.state.value} onChange={this.handleChange} name='zip'/>
-        </label><br/>
-        <label>
-          Photo Url:
-          <input type="text" value={this.state.value} onChange={this.handleChange} name='photo_url'/>
-        </label>
-        <input type="submit" value="submit" />
-      </form>
-      </div>
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <label >
+                            First Name:
+                    </label>
+                        <input type="text" onChange={this.handleChange} name='firstName' />
+                        <br />
+                        <label>
+                            Last Name:
+                    </label>
+                        <input type="text" onChange={this.handleChange} name='lastName' />
+                        <br />
+                        <label>
+                            Address:</label>
+                        <input type="text" onChange={this.handleChange} name='address' />
+                        <br />
+                        <label>
+                            City:</label>
+                        <input type="text" onChange={this.handleChange} name='city' />
+                        <br />
+                        <label>
+                            State:</label>
+                        <input type="text" onChange={this.handleChange} name='state' />
+                        <br />
+                        <label>
+                            Zip Code:</label>
+                        <input type="text" onChange={this.handleChange} name='zip' />
+                        <br />
+                        <label>
+                            Photo Url:</label>
+                        <input type="text" onChange={this.handleChange} name='photo_url' />
+
+                        {/* <input type="submit" value="submit" /> */}
+                        <button> Submit </button>
+                    </div>
+                </form>
+            </div>
         );
     }
 }
