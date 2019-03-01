@@ -21,8 +21,8 @@ from rest_framework import routers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('parkSpot_app.urls')),
-    path('users', include('parkSpot_app.urls')),
+    path('api/', include('parkSpot_app.urls')),
+    
 ]
 
 

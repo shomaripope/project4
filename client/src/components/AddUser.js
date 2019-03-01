@@ -26,7 +26,7 @@ class AddUser extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const newUserInfo = { ...this.state.user }
-        axios.post('api/users/', newUserInfo)
+        axios.post('http://127.0.0.1:8000/api/users/', newUserInfo)
     }
 
     render() {

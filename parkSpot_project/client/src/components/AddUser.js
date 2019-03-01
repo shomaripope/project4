@@ -26,7 +26,7 @@ class AddUser extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const newUserInfo = { ...this.state.user }
-        axios.post('api/users/', newUserInfo)
+        axios.post('/api/users/', newUserInfo)
     }
 
     render() {

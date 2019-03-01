@@ -10,7 +10,8 @@ class AddUser extends Component {
             city: '',
             state: '',
             zip: null,
-            photo_url: ''
+            photo_url: '',
+            spots: ''
 
         }
     }
@@ -26,7 +27,7 @@ class AddUser extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const newUserInfo = { ...this.state.user }
-        axios.post('api/users/', newUserInfo)
+        axios.post('http://localhost:8000/api/users/', newUserInfo)
     }
 
     render() {
@@ -63,6 +64,9 @@ class AddUser extends Component {
                         <label>
                             Photo Url:</label>
                         <input type="text" onChange={this.handleChange} name='photo_url' />
+                        <br />
+                        <label>Spots:</label>
+                        <input type="text" onChange={this.handleChange} name='spots' />
 
                         {/* <input type="submit"  /> */}
                         <button value="submit"> Submit </button>
