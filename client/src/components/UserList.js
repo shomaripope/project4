@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import User from './User';
 
-
-class UserList extends Component {
-    
-    
+class UserList extends Component {   
     render() {
         return (
             <div>
                 <h1> User List </h1> 
-                <section>
+                <section className="card">
                 {
                     this.props.users.map((user,i) => {
         

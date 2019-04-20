@@ -37,20 +37,20 @@ class AddUser extends Component {
                         <label >
                             First Name:
                     </label>
-                        <input type="text" onChange={this.handleChange} name='firstName' />
+                        <input type="text" onChange={this.handleChange} name='firstName' id="autocomplete-input" class="autocomplete" />
                         <br />
                         <label>
                             Last Name:
                     </label>
-                        <input type="text" onChange={this.handleChange} name='lastName' />
+                        <input type="text" onChange={this.handleChange} name='lastName' id="autocomplete-input" class="autocomplete" />
                         <br />
                         <label>
                             Address:</label>
-                        <input type="text" onChange={this.handleChange} name='address' />
+                        <input type="text" onChange={this.handleChange} name='address' id="autocomplete-input" class="autocomplete" />
                         <br />
                         <label>
                             City:</label>
-                        <input type="text" onChange={this.handleChange} name='city' />
+                        <input type="text" onChange={this.handleChange} name='city' id="autocomplete-input" class="autocomplete" />
                         <br />
                         <label>
                             State:</label>
@@ -65,7 +65,7 @@ class AddUser extends Component {
                         <input type="text" onChange={this.handleChange} name='photo_url' />
 
                         {/* <input type="submit"  /> */}
-                        <button value="submit"> Submit </button>
+                        <button value="submit" onSubmit={this.handleSubmit}> Submit </button>
                     </div>
                 </form>
             </div>

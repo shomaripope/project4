@@ -12,7 +12,7 @@ class App extends Component {
   state = {
     users:[
         {
-            id: 1,
+        id: 1,
         firstName: 'shomari',
         lastName: 'pope',
         address: '11747 Upton rd',
@@ -22,7 +22,7 @@ class App extends Component {
         photo_url: 'src/images/profilepic.png',
         },
         {
-            id: 2,
+        id: 2,
         firstName: 'jared',
         lastName: 'letto',
         address: '11432 Upton rd',
@@ -32,7 +32,7 @@ class App extends Component {
         photo_url: 'https://livability.com/sites/default/files/LansingMI.jpg',
         },
         {
-            id: 3,
+        id: 3,
         firstName: 'chris',
         lastName: 'tucker',
         address: '11477 Upton rd',

@@ -4,12 +4,20 @@ class Spot extends Component {
     render() {
         return (
             <div>
-               First Name: {this.props.user.firstName} <br/>
-               Last Name: {this.props.user.lastName} <br/>
-               Address: {this.props.user.address} <br/>
-               City: {this.props.user.city} <br/>
-               State: {this.props.user.state} <br/>
-               Photo: {this.props.user.photo_url} 
+                HEY IM SPOT
+                {this.props.spot.map((newSpot, i)=>(
+                    <div className="card" key ={i}> 
+                                    {newSpot.company} <br/>
+                                    {newSpot.photo_url} <br/>
+                                    {newSpot.spotAvailable} <br/>
+                                    {newSpot.free} <br/>
+                                    {newSpot.address} <br/>
+                                    {newSpot.city} <br/>
+                                    {newSpot.state} <br/>
+                                    {newSpot.zip} <br/>
+                                    {newSpot.sizeCapacity} <br/>
+                    </div>
+                 ) )}
             </div>
         );
     }
